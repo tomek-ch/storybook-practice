@@ -1,6 +1,10 @@
 import Button from "./button";
 
 export const basicButton = () => <Button>Basic button</Button>;
+export const secondaryButton = () => (
+  <Button variant="secondary">Secondary button</Button>
+);
+
 export const functionButton = () => (
   <Button onClick={() => alert("hello")}>Function button</Button>
 );

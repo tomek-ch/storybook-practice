@@ -1,16 +1,26 @@
 import { func, node, string } from "prop-types";
 
-const Button = ({ children, href, onClick }) =>
+import StyledButton, { StyledLinkButton } from "./button.styles";
+
+const Button = ({ children, href, onClick, variant }) =>
   href ? (
-    <a href={href}>{children}</a>
+    <StyledLinkButton href={href} variant={variant}>
+      {children}
+    </StyledLinkButton>
   ) : (
-    <button onClick={onClick}>{children}</button>
+    <StyledButton onClick={onClick} variant={variant}>
+      {children}
+    </StyledButton>
   );
 
 Button.propTypes = {
   children: node.isRequired,
   href: string,
   onClick: func,
+};
+
+Button.defaultProps = {
+  variant: "primary",
 };
 
 export default Button;
