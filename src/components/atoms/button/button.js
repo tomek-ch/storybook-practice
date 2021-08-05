@@ -1,4 +1,4 @@
-import { func, node, string } from "prop-types";
+import { func, node, string, oneOf } from "prop-types";
 
 import StyledButton, { StyledLinkButton } from "./button.styles";
 
@@ -17,7 +17,7 @@ Button.propTypes = {
   children: node.isRequired,
   href: string,
   onClick: func,
-  variant: string,
+  variant: oneOf(["primary", "secondary"]),
 };
 
 Button.defaultProps = {
