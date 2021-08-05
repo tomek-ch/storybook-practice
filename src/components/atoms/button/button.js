@@ -17,6 +17,7 @@ Button.propTypes = {
   children: node.isRequired,
   href: string,
   onClick: func,
+  variant: string,
 };
 
 Button.defaultProps = {
